@@ -30,7 +30,6 @@ namespace WindowsFormsAppOrarend
             }
             else
             {
-                MessageBox.Show("Nincs kiválasztott óra");
                 return;
             }
             switch (this.mod)
@@ -65,10 +64,12 @@ namespace WindowsFormsAppOrarend
             switch (this.mod)
             {
                 case "Beszúrás":
-                    
+                    Program.db.Beszuras(textBox_oranev.Text, numericUpDown_sorszam.Value);
+                    MessageBox.Show("Sikeres beszúrás!");
+                    Program.formOrarend.updateOraLista();
                     break;
                 case "Módosítás":
-                    Program.db.Torles(int.Parse(textBox_oraid.Text.ToString()));
+                    Program.db.Modositas(textBox_oranev.Text,numericUpDown_sorszam.Value,int.Parse(textBox_oraid.Text.ToString()));
                     MessageBox.Show("Sikeres módosítás!");
                     Program.formOrarend.updateOraLista();
                     break;

@@ -93,14 +93,19 @@ namespace WindowsFormsAppOrarend
             command.ExecuteNonQuery();
             zar();
         }
-        //public void Modositas()
-        //{
-        //    nyit();
-        //    command.CommandText = $"UPDATE `termek` SET `termeknev`='{textBox_modositastermeknev.Text}',`ar`='{numericUpDown_modositasar.Value}',`db`='{numericUpDown_modositasraktarKeszlet.Value}' WHERE termek.termekid={textBox_modositastermekid.Text.ToString()}";
-        //    command.ExecuteNonQuery();
-        //    MessageBox.Show("Sikeres módosítás!");
-        //    Program.formVasarlas.updateTermekekLista();
-        //    zar();
-        //}
+        public void Modositas(string tantargy, decimal sorszam, int oraid)
+        {
+            nyit();
+            command.CommandText = $"UPDATE `orak` SET `tantargy`='{tantargy}', `sorszam`='{sorszam}' WHERE orak.oraid={oraid}";
+            command.ExecuteNonQuery();
+            zar();
+        }
+        public void Beszuras(string tantargy, decimal sorszam)
+        {
+            nyit();
+            command.CommandText = $"INSERT INTO `orak` (`tantargy`, `sorszam`) VALUES ('{tantargy}', '{sorszam}');";
+            command.ExecuteNonQuery();
+            zar();
+        }
     }
 }

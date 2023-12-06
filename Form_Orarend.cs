@@ -60,5 +60,17 @@ namespace WindowsFormsAppOrarend
             Form_Ora formDelete = new Form_Ora("Törlés");
             formDelete.ShowDialog();
         }
+
+        private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Ora formUpdate = new Form_Ora("Módosítás");
+            formUpdate.ShowDialog();
+        }
+
+        private void beszúrásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Ora formUpdate = new Form_Ora("Beszúrás");
+            formUpdate.ShowDialog();
+        }
     }
 }

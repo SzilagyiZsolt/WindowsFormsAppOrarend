@@ -178,12 +178,14 @@
             this.beszúrásToolStripMenuItem.Name = "beszúrásToolStripMenuItem";
             this.beszúrásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.beszúrásToolStripMenuItem.Text = "Beszúrás";
+            this.beszúrásToolStripMenuItem.Click += new System.EventHandler(this.beszúrásToolStripMenuItem_Click);
             // 
             // módosításToolStripMenuItem
             // 
             this.módosításToolStripMenuItem.Name = "módosításToolStripMenuItem";
             this.módosításToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.módosításToolStripMenuItem.Text = "Módosítás";
+            this.módosításToolStripMenuItem.Click += new System.EventHandler(this.módosításToolStripMenuItem_Click);
             // 
             // törlésToolStripMenuItem
             // 

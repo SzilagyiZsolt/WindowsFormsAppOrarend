@@ -33,12 +33,18 @@
             this.textBox_oranev = new System.Windows.Forms.TextBox();
             this.textBox_oraid = new System.Windows.Forms.TextBox();
             this.button_muvelet = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_sorszam)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.button_muvelet);
             this.groupBox1.Controls.Add(this.numericUpDown_sorszam);
             this.groupBox1.Controls.Add(this.textBox_oranev);
@@ -52,7 +58,7 @@
             // 
             // numericUpDown_sorszam
             // 
-            this.numericUpDown_sorszam.Location = new System.Drawing.Point(57, 119);
+            this.numericUpDown_sorszam.Location = new System.Drawing.Point(57, 134);
             this.numericUpDown_sorszam.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -64,7 +70,7 @@
             // 
             // textBox_oranev
             // 
-            this.textBox_oranev.Location = new System.Drawing.Point(57, 78);
+            this.textBox_oranev.Location = new System.Drawing.Point(57, 84);
             this.textBox_oranev.Name = "textBox_oranev";
             this.textBox_oranev.Size = new System.Drawing.Size(165, 20);
             this.textBox_oranev.TabIndex = 1;
@@ -84,6 +90,33 @@
             this.button_muvelet.TabIndex = 3;
             this.button_muvelet.UseVisualStyleBackColor = true;
             this.button_muvelet.Click += new System.EventHandler(this.button_muvelet_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "ÓraID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(54, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Tantárgy";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(54, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Sorszám";
             // 
             // Form_Ora
             // 
@@ -107,5 +140,8 @@
         private System.Windows.Forms.TextBox textBox_oranev;
         private System.Windows.Forms.Button button_muvelet;
         public System.Windows.Forms.TextBox textBox_oraid;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
