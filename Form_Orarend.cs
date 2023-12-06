@@ -16,6 +16,19 @@ namespace WindowsFormsAppOrarend
         {
             InitializeComponent();
         }
+        public void updateOraLista()
+        {
+            listBox_Nap1.Items.Clear();
+            listBox_Nap1.Items.AddRange(Program.db.getOrak("hétfő").ToArray());
+            listBox_Nap2.Items.Clear();
+            listBox_Nap2.Items.AddRange(Program.db.getOrak("kedd").ToArray());
+            listBox_Nap3.Items.Clear();
+            listBox_Nap3.Items.AddRange(Program.db.getOrak("szerda").ToArray());
+            listBox_Nap4.Items.Clear();
+            listBox_Nap4.Items.AddRange(Program.db.getOrak("csütörtök").ToArray());
+            listBox_Nap5.Items.Clear();
+            listBox_Nap5.Items.AddRange(Program.db.getOrak("péntek").ToArray());
+        }
 
         private void Form_Orarend_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -31,26 +44,21 @@ namespace WindowsFormsAppOrarend
 
         private void listBox_Nap1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (listBox_Nap1.SelectedIndex<0)
+            {
+                return;
+            }
         }
 
         private void Form_Orarend_Load(object sender, EventArgs e)
         {
-            listBox_Nap1.Items.Clear();
-            listBox_Nap1.Items.AddRange(Program.db.getOrak("hétfő").ToArray());
-            listBox_Nap2.Items.Clear();
-            listBox_Nap2.Items.AddRange(Program.db.getOrak("kedd").ToArray());
-            listBox_Nap3.Items.Clear();
-            listBox_Nap3.Items.AddRange(Program.db.getOrak("szerda").ToArray());
-            listBox_Nap4.Items.Clear();
-            listBox_Nap4.Items.AddRange(Program.db.getOrak("csütörtök").ToArray());
-            listBox_Nap5.Items.Clear();
-            listBox_Nap5.Items.AddRange(Program.db.getOrak("péntek").ToArray());
+            updateOraLista();
         }
 
         private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form_Ora formDelete = new Form_Ora("Törlés");
+            formDelete.ShowDialog();
         }
     }
 }

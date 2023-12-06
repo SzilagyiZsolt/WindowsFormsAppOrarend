@@ -85,7 +85,22 @@ namespace WindowsFormsAppOrarend
             }
             zar();
             return userid;
-
         }
+        public void Torles(int oraid)
+        {
+            nyit();
+            command.CommandText =$"DELETE FROM orak WHERE `orak`.`oraid` = {oraid};";
+            command.ExecuteNonQuery();
+            zar();
+        }
+        //public void Modositas()
+        //{
+        //    nyit();
+        //    command.CommandText = $"UPDATE `termek` SET `termeknev`='{textBox_modositastermeknev.Text}',`ar`='{numericUpDown_modositasar.Value}',`db`='{numericUpDown_modositasraktarKeszlet.Value}' WHERE termek.termekid={textBox_modositastermekid.Text.ToString()}";
+        //    command.ExecuteNonQuery();
+        //    MessageBox.Show("Sikeres módosítás!");
+        //    Program.formVasarlas.updateTermekekLista();
+        //    zar();
+        //}
     }
 }

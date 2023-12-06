@@ -224,11 +224,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox_Nap1;
-        private System.Windows.Forms.ListBox listBox_Nap2;
-        private System.Windows.Forms.ListBox listBox_Nap3;
-        private System.Windows.Forms.ListBox listBox_Nap4;
-        private System.Windows.Forms.ListBox listBox_Nap5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -239,5 +234,10 @@
         private System.Windows.Forms.ToolStripMenuItem beszúrásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem módosításToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem törlésToolStripMenuItem;
+        public System.Windows.Forms.ListBox listBox_Nap1;
+        public System.Windows.Forms.ListBox listBox_Nap2;
+        public System.Windows.Forms.ListBox listBox_Nap3;
+        public System.Windows.Forms.ListBox listBox_Nap4;
+        public System.Windows.Forms.ListBox listBox_Nap5;
     }
 }
